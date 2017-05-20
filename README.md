@@ -24,5 +24,5 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 ![Road_Network_lanes](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_lanes.png)
 
 ### Road Network length
-![Road_Network_length](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_lanes.png)
+![Road_Network_length](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_length.png)
 
