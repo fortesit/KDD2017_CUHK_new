@@ -8,21 +8,22 @@ datapath = "../../../../data/original_dataset/"
 #======================================================
 #train data
 #df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
-df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
-df_volume = readDataUtil.read_volume(datapath+"/training/volume_table_6_training.csv")
-df_weather = readDataUtil.read_weather(datapath+"/training/weather_table_7_training_update.csv")
+# df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
+# df_volume = readDataUtil.read_volume(datapath+"/training/volume_table_6_training.csv")
+# df_weather = readDataUtil.read_weather(datapath+"/training/weather_table_7_training_update.csv")
+
 #outname = 'phase1_training_vol_route_interpolated_weather_joined_table'
 #times = pd.date_range('09/20/2016' , '10/18/2016', freq="3H")
-outname = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
-vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
-route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
+# outname = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
+# vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
+# route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
 #======================================================
 ##test data
-#df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
-#df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
-#df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7_test1.csv")
-#outname = 'phase1_testing_vol_route_weather_joined_table'
-#times = pd.date_range('10/18/2016' , '10/25/2016', freq="3H")
+df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
+df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
+df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7_test1.csv")
+outname = 'phase1_testing_vol_route_weather_joined_table'
+times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
 #======================================================
 
 def is_holiday(t):
