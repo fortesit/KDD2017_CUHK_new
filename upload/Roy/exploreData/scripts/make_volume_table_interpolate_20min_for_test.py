@@ -6,7 +6,6 @@ import readDataUtil
 
 datapath = "../../../../data/original_dataset/"
 #======================================================
-<<<<<<< HEAD
 #train data
 #df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
 # df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
@@ -18,7 +17,6 @@ datapath = "../../../../data/original_dataset/"
 # outname = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
 # vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
 # route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
-||||||| merged common ancestors
 #train data
 #df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
 df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
@@ -29,7 +27,7 @@ df_weather = readDataUtil.read_weather(datapath+"/training/weather_table_7_train
 outname = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
 vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
 route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
-=======
+
 ##train data
 ##df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
 #df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
@@ -40,23 +38,23 @@ route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
 #outname = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
 #vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
 #route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
->>>>>>> 297bd76a76c7160c1907a7aac29959da94f304ef
+
 #======================================================
-<<<<<<< HEAD
+
 ##test data
 df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
 df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
 df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7_test1.csv")
 outname = 'phase1_testing_vol_route_weather_joined_table'
 times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
-||||||| merged common ancestors
+
 ##test data
 #df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
 #df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
 #df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7_test1.csv")
 #outname = 'phase1_testing_vol_route_weather_joined_table'
 #times = pd.date_range('10/18/2016' , '10/25/2016', freq="3H")
-=======
+
 #test data
 df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
 df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
@@ -64,7 +62,7 @@ df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7
 outname = 'phase1_testing_vol_route_weather_joined_table'
 vol_sampling_times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
 route_sampling_times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
->>>>>>> 297bd76a76c7160c1907a7aac29959da94f304ef
+
 #======================================================
 
 def is_holiday(t):
