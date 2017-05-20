@@ -17,11 +17,12 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 
   During Chinese national holiday week, highway tolls were waived for passenger vehicles.
 
-![Road_Network_id](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_id.png)
 ### Road Network id
+![Road_Network_id](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_id.png)
 
-![Road_Network_lanes](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_lanes.png)
 ### Road Network lanes
+![Road_Network_lanes](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_lanes.png)
 
-![Road_Network_length](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_lanes.png)
 ### Road Network length
+![Road_Network_length](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_lanes.png)
+
