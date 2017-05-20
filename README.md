@@ -25,11 +25,11 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 ![Road_Network_length](https://raw.githubusercontent.com/kin-cs/KDD2017_CUHK_new/master/etc/Data%20Visualization/phase1_road_network_length.png)
 
 
-## Checkpoints
+## Checkpoints (Volume)
 5 Checkpoint: 1-0 , 1-1, 2-0, 3-0, 3-1
     2nd index{ 0: entry, 1: exit }
 
-## Lanes
+## Lanes (Traj)
 6 Paths: A-2, A-3, B-1, B-3, C-1, C-3
 
 # Datasets:
