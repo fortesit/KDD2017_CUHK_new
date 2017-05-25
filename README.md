@@ -6,6 +6,10 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 
 
 # Data Feature:
+## Basic Info
+![Info1](https://img.alicdn.com/tps/TB1gP0QPVXXXXaQXFXXXXXXXXXX-809-267.png)
+
+
 ## Chinese Holidays:
   There were two Chinese holidays during the time of the dataset.
 
