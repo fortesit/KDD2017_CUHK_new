@@ -37,9 +37,24 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 6 Paths: A-2, A-3, B-1, B-3, C-1, C-3
 
 # Datasets:
-- Trajectories [2016,7,19] - [2016,10,17]
-- Volume       [2016,9,19] - [2016,10,17]
-- Weather      [2016,7, 1] - [2016,10,17]
+[Phase 1]
+- Trajectories [2016, 7,19] - [2016,10,17]
+- Volume       [2016, 9,19] - [2016,10,17]
+- Weather      [2016, 7, 1] - [2016,10,17]
+
+[Test Phase 1]
+- Weather      [2016,10,18] - [2016,10,24]
+
+[Phase 2]
+- Trajectories [2016,10,18] - [2016,10,24]
+- Volume       [2016,10,18] - [2016,10,24]
+- Weather      [2016,10,25] - [2016,10,31]
+
+[Test (Final)]
+- Trajectories [2016,10,25] - [2016,10,31] (6:00-7:59 & 15:00-16:59 only)
+- Volume       [2016,10,25] - [2016,10,31] (6:00-7:59 & 15:00-16:59 only)
+
+(All data above contain entire 24 hrs, except Final Test data.)
 
 ## Features:
 1. Volume (total) (20m)
