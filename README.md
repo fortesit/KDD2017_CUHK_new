@@ -55,6 +55,18 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 - Trajectories [2016,10,25] - [2016,10,31] (6:00-7:59 & 15:00-16:59 only)
 - Volume       [2016,10,25] - [2016,10,31] (6:00-7:59 & 15:00-16:59 only)
 
+
+=== In conclusion, totally we have... ===
+[Training Dataset]
+- Trajectories [2016, 7,19] - [2016,10,24]
+- Volume       [2016, 9,19] - [2016,10,24]
+- Weather      [2016, 7, 1] - [2016,10,31]
+
+[Test (Final)]
+- Trajectories [2016,10,25] - [2016,10,31] (6:00-7:59 & 15:00-16:59 only)
+- Volume       [2016,10,25] - [2016,10,31] (6:00-7:59 & 15:00-16:59 only)
+
+
 (All data above contain entire 24 hrs, except Final Test data.)
 ```
 ## Features:
