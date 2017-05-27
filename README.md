@@ -102,11 +102,3 @@ https://github.com/studdykid/KDD2017_CUHK/wiki/About-joined-csv-table
 ## Done:
 1. Investigate Backfill for FillNA: Solved by interpolate (by Panda function)
 2. Moving avg for 3hr's features (interpolate)
-
-```
-def decode(last_timestamp_values, nn_output):
-    tmp = np.zeros(17)
-    tmp[0:6] = nn_output
-    tmp = scaler.inverse_transform(tmp)
-    return last_timestamp_values + tmp
-```
