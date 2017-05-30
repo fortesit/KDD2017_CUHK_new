@@ -6,31 +6,66 @@ import readDataUtil
 
 datapath = "../../../../data/original_dataset/"
 #======================================================
-#train data
-#df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
-# df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
-# df_volume = readDataUtil.read_volume(datapath+"/training/volume_table_6_training.csv")
-# df_weather = readDataUtil.read_weather(datapath+"/training/weather_table_7_training_update.csv")
-
-#outname = 'phase1_training_vol_route_interpolated_weather_joined_table'
-#times = pd.date_range('09/20/2016' , '10/18/2016', freq="3H")
-# outname = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
-# vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
-# route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
+#Phase1
+#======================================================
+##train data
+##df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
+#df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
+#df_volume = readDataUtil.read_volume(datapath+"/training/volume_table_6_training.csv")
+#df_weather = readDataUtil.read_weather(datapath+"/training/weather_table_7_training_update.csv")
+#outname  = 'phase1_training_vol_route_weather_joined_table_interpolated_per20min'
+#outname2 = 'phase1_training_route_weather_joined_table_interpolated_per20min'
+#vol_sampling_times = pd.date_range('09/20/2016' , '10/18/2016', freq="20min")
+#route_sampling_times = pd.date_range('07/19/2016' , '10/18/2016', freq="20min")
 #======================================================
 ##test data
-df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
-df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
-df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7_test1.csv")
-outname = 'phase1_testing_vol_route_weather_joined_table'
-times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
+#df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/testing_phase1/trajectories_table_5_test1.csv")
+#df_volume = readDataUtil.read_volume(datapath+"/testing_phase1/volume_table_6_test1.csv")
+#df_weather = readDataUtil.read_weather(datapath+"/testing_phase1/weather_table_7_test1.csv")
+#outname  = 'phase1_testing_vol_route_weather_joined_table_interpolated_per20min'
+#outname2 = 'phase1_testing_route_weather_joined_table_interpolated_per20min'
+#vol_sampling_times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
+#route_sampling_times = pd.date_range('10/18/2016' , '10/25/2016', freq="20min")
+
+#======================================================
+#Phase2
+#======================================================
+#train data
+#df_trajectories, df_travel_segment = readDataUtil.read_trajectory("df_trajectories.pkl", "df_travel_segment.pkl")
+df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/training/trajectories_table_5_training.csv")
+df_volume = readDataUtil.read_volume(datapath+"/training/volume_table_6_training.csv")
+df_weather = readDataUtil.read_weather(datapath+"/training/weather_table_7_training_update.csv")
+
+df_trajectories2, df_travel_segment2 = readDataUtil.read_trajectory(datapath+"/dataSet_phase2/trajectories_table_5_training_phase2.csv")
+df_volume2 = readDataUtil.read_volume(datapath+"/dataSet_phase2/volume_table_6_training_phase2.csv")
+df_weather2 = readDataUtil.read_weather(datapath+"/dataSet_phase2/weather_table_7_phase2.csv")
+
+df_trajectories = pd.concat( [ df_trajectories, df_trajectories2] )
+df_travel_segment = pd.concat( [ df_travel_segment, df_travel_segment2] )
+df_volume= pd.concat( [ df_volume, df_volume2] )
+df_weather= pd.concat( [ df_weather, df_weather2] )
+
+outname  = 'phase1and2_training_vol_route_weather_joined_table_interpolated_per20min'
+outname2 = 'phase1and2_training_route_weather_joined_table_interpolated_per20min'
+vol_sampling_times = pd.date_range('09/20/2016' , '10/25/2016', freq="20min")
+route_sampling_times = pd.date_range('07/19/2016' , '10/25/2016', freq="20min")
+#======================================================
+##test data
+#df_trajectories, df_travel_segment = readDataUtil.read_trajectory(datapath+"/dataSet_phase2/trajectories_table_5_test_phase2.csv")
+#df_volume = readDataUtil.read_volume(datapath+"/dataSet_phase2/volume_table_6_test_phase2.csv")
+#df_weather = readDataUtil.read_weather(datapath+"/dataSet_phase2/weather_table_7_phase2.csv")
+#
+#outname  = 'phase2_testing_vol_route_weather_joined_table_interpolated_per20min'
+#outname2 = 'phase2_testing_route_weather_joined_table_interpolated_per20min'
+#vol_sampling_times = pd.date_range('10/25/2016' , '11/1/2016', freq="20min")
+#route_sampling_times = pd.date_range('10/25/2016' , '11/1/2016', freq="20min")
 #======================================================
 
 def is_holiday(t):
   rdate = t.date()
   if rdate>=datetime.date(2016, 9,15) and rdate<=datetime.date(2016, 9,17): return 1 #mid autum holiday
   if rdate==datetime.date(2016, 9,18): return 0
-  if rdate>=datetime.date(2016,10, 1) and rdate<=datetime.date(2016,10, 7): return 1 #national holiday
+  if rdate>=datetime.date(2016,10, 1) and rdate<=datetime.date(2016,10, 7): return 2 #national holiday
   if rdate>=datetime.date(2016,10, 8) and rdate<=datetime.date(2016,10, 9): return 0
   if t.dayofweek == 0 or t.dayofweek == 6: return 1 # sun or sat
   return 0 #weekdays
@@ -42,6 +77,14 @@ weather_fields = ['pressure', 'sea_pressure', 'wind_direction',
 vehicle_class = ['motorcycle', 'cargocar', 'privatecar', 'unknowncar']
 
 #======================================================
+
+df_travel_segment = df_travel_segment.set_index('starting_time')
+segment_time_mean20min = df_travel_segment.groupby(['link_id', pd.TimeGrouper('20min')]).mean()
+segment_time_mean10min = df_travel_segment.groupby(['link_id', pd.TimeGrouper('10min')]).mean()
+segment_time_mean5min = df_travel_segment.groupby(['link_id', pd.TimeGrouper('5min')]).mean()
+del segment_time_mean20min['day_of_week']
+del segment_time_mean10min['day_of_week']
+del segment_time_mean5min['day_of_week']
 
 # prepare volume data
 def get_vehicle_class(row):
@@ -79,25 +122,25 @@ for (p,q) in vols:
 
 df_cartype_volume = pd.DataFrame(tmp)
 
-# prepare route median data
-trajectories_median = df_trajectories.set_index('starting_time') \
-                                     .groupby(['intersection_id', 'tollgate_id',pd.TimeGrouper('20min')]) \
-                                     .travel_time \
-                                     .median()
+# prepare route mean data
+trajectories_mean = df_trajectories.set_index('starting_time') \
+                                   .groupby(['intersection_id', 'tollgate_id',pd.TimeGrouper('20min')]) \
+                                   .travel_time \
+                                   .mean()
 tmp = {}
 for aroute in routes:
-  tmp2 = trajectories_median[aroute].reindex(route_sampling_times) #fill missing times with NA
+  tmp2 = trajectories_mean[aroute].reindex(route_sampling_times) #fill missing times with NA
   tmp2 = tmp2.interpolate() #interpolate NA from nearby data
   tmp[aroute]=tmp2
-df_trajectories_median = pd.DataFrame(tmp)
+df_trajectories_mean = pd.DataFrame(tmp)
 
 # preapre weather data
 df_weather['wind_direction'].replace(999017,np.NaN, inplace=True)
-df_weather = df_weather.reindex(vol_sampling_times) 
+df_weather = df_weather.reindex(route_sampling_times) 
 df_weather = df_weather.apply(pd.Series.interpolate) #interpolate 3hr interval data to 20min interval
 
 # combine and add extra columns
-df_combined = pd.concat( [df_cartype_volume, df_trajectories_median.loc[vol_sampling_times] , df_weather] , axis=1)
+df_combined = pd.concat( [df_cartype_volume, df_trajectories_mean.loc[vol_sampling_times] , df_weather.loc[vol_sampling_times]] , axis=1)
 df_combined["date"] = df_combined.index
 df_combined["dayofweek"] = df_combined['date'].apply( lambda x: x.dayofweek )
 df_combined["hour"] = df_combined['date'].apply( lambda x: x.hour )
@@ -105,3 +148,13 @@ df_combined["is_holiday"] = df_combined['date'].apply( is_holiday )
 
 df_combined.to_csv('%s.csv'%outname, index=False)
 df_combined.to_pickle('%s.pkl'%outname)
+
+# traj only dataframe covering a longer time
+df_traj_weather = pd.concat( [df_trajectories_mean, df_weather.loc[route_sampling_times]] , axis=1)
+df_traj_weather["date"] = df_traj_weather.index
+df_traj_weather["dayofweek"] = df_traj_weather['date'].apply( lambda x: x.dayofweek )
+df_traj_weather["hour"] = df_traj_weather['date'].apply( lambda x: x.hour )
+df_traj_weather["is_holiday"] = df_traj_weather['date'].apply( is_holiday )
+
+df_traj_weather.to_csv('%s.csv'%outname2, index=False)
+df_traj_weather.to_pickle('%s.pkl'%outname2)
