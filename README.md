@@ -1,3 +1,5 @@
+https://github.com/kin-cs/Kaggle_Amazon_2017/invitations
+
 # KDD2017_CUHK
 KDD 2017 team from CUHK
 
